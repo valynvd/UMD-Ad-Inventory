@@ -9,6 +9,10 @@
     <h1>Welcome to the Sample Webpage</h1>
     <p>This page dynamically loads scripts based on the manifest file.</p>
     
-
+    <ul>
+    <% creatives.forEach(function(creative){ %>
+        <li><%- creative %></li>
+    <% }); %>
+    </ul>
 </body>
 </html>

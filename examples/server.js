@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     const skinadJs = manifest['skinad.js']?.path || '';
     const advertorialEmbedJs = manifest['advertorialEmbed.js']?.path || '';
 
-    res.render('index',{title:"Hompage",creatives:[{skinad: skinadJs},{newstag: newstagJsm},{advembed:advertorialEmbedJs}]});
+    res.render('index',{title:"Hompage",creatives:[skinadJs, newstagJs, advertorialEmbedJs]});
     // res.send(`
     //     <!DOCTYPE html>
     //     <html lang="en">

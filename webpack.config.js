@@ -1,7 +1,7 @@
 const path = require("path");
 const { version } = require("./package.json"); 
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin'); 
-const ESLintPlugin= require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   mode: "production",
