@@ -2,10 +2,11 @@ const par = (typeof parent !== "undefined") && parent;
 const win = ( par && par.window ) ? par.window : window;
 const doc = ( par && par.document) ? par.document : document;
 const kly = ( par && (par.kly || par.kmklabs)) || {};
-let site = (kly.site || "").toLowerCase();
-if (site === "bola.com") site = "bolacom";
 const platform = (kly.platform || "").toLowerCase();
 const pageType = (kly.pageType || "").toLowerCase();
+let site = (kly.site || "").toLowerCase();
+
+if (site === "bola.com") site = "bolacom";
 
 async function init(format, config) {
   config = config || {};
