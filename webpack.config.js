@@ -12,7 +12,8 @@ module.exports = {
     chunkFilename: `KLYCreative.[name].${version}.[contenthash].js`, // Dynamic imports
     library: "KLYCreative",
     libraryTarget: "umd",
-    globalObject: "this"
+    globalObject: "this",
+    clean: true
   },
   plugins: [
     new WebpackManifestPlugin({
