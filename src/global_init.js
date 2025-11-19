@@ -34,29 +34,5 @@ async function init(format, config) {
   }
 }
 
-(function autoInit() {
-  try {
-    const currentScript =
-      document.currentScript ||
-      document.querySelector('script[src*="ad_Inventory"]') ||
-      (function () {
-        const scripts = document.getElementsByTagName("script");
-        return scripts[scripts.length - 1];
-      })();
-
-    if (!currentScript || !currentScript.src) return;
-
-    const src = new URL(currentScript.src, document.location.href);
-    const creative = src.searchParams.get("creative");
-
-    if (creative) {
-      console.log(`[adInventory] Auto init creative: ${creative}`);
-      init(creative);
-    }
-  } catch (e) {
-    console.warn("[adInventory] Failed to auto init creative:", e);
-  }
-})();
-
 export { init };
 
